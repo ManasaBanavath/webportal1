@@ -3,112 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Sample Website</title>
   <style>
+    /* Reset some default styles to have a cleaner starting point */
+    body, h1, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    /* Navigation bar styles */
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+    }
+
+    nav ul {
+      list-style-type: none;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
     }
 
-    .login-container {
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #f2f2f2;
       padding: 20px;
-      width: 300px;
+      text-align: center;
     }
 
-    .input-group {
-      margin-bottom: 15px;
+    /* Main content styles */
+    .main-content {
+      padding: 20px;
     }
 
-    .input-group label {
-      display: block;
-      margin-bottom: 5px;
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
     }
-
-    .input-group input {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .login-btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .error-message {
-      color: red;
-      margin-top: 5px;
+    .topnav-right 
+    {
+    padding-left: 1000px;
     }
   </style>
-
-  <!-- Gainsight PX Tag-->
-  <script type="text/javascript">
-  (function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
-      (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
-    var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
-    var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-8AKPO7UW84QM-2-2");
-  </script>
-<!-- Gainsight PX Tag-->
-
 </head>
 <body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <div class="input-group">
-      <label for="username">Username</label>
-      <input type="text" id="username" placeholder="Enter your username">
-      <div class="error-message" id="usernameError"></div>
-    </div>
-    <div class="input-group">
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter your password">
-      <div class="error-message" id="passwordError"></div>
-    </div>
-    <button class="login-btn" onclick="validateLogin()">Login</button>
+   <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="topnav-right"><a href="home.html">SignIn</a></li>
+    </ul>
+  </nav>
+
+
+  <header>
+    <h1>Welcome to our Sample Website</h1>
+  </header>
+
+  <div class="main-content">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum ligula nec neque euismod, id posuere quam aliquet.</p>
+
+    <h2>Our Services</h2>
+    <ul>
+      <li>Web Design</li>
+      <li>Graphic Design</li>
+      <li>Software Development</li>
+    </ul>
   </div>
 
+  <footer>
+    <p>&copy; 2023 Sample Website. All rights reserved.</p>
+  </footer>
+
   <script>
-    function validateLogin() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      const usernameError = document.getElementById('usernameError');
-      const passwordError = document.getElementById('passwordError');
-
-      // Reset error messages
-      usernameError.textContent = '';
-      passwordError.textContent = '';
-
-      // Simple validation
-      if (!username.trim()) {
-        usernameError.textContent = 'Username is required';
-        return;
-      }
-
-      if (!password) {
-        passwordError.textContent = 'Password is required';
-        return;
-      }
-
-      // You can add more complex validation or perform server-side authentication here
-      // For demonstration purposes, we'll just show an alert for successful login
-      //alert('Login successful!'); 
-      window.location.href = "home.html"
-    }
+    // You can add JavaScript code here to enhance the website's interactivity
+    // For example, handling user interactions or dynamic content updates
   </script>
 </body>
 </html>
